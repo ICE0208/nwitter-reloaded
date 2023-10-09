@@ -3,7 +3,7 @@ import Home from "routes/home";
 import Profile from "routes/profile";
 import Login from "routes/login";
 import CreateAccount from "routes/create-account";
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 import Layout from "components/layout";
 import { useEffect, useState } from "react";
@@ -55,11 +55,17 @@ function App() {
   }, []);
 
   return (
-    <>
+    <Wrapper>
       <GlobalStyles />
       {isLoading ? <LoadingScreen /> : <RouterProvider router={router} />}
-    </>
+    </Wrapper>
   );
 }
+
+const Wrapper = styled.div`
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+`;
 
 export default App;
