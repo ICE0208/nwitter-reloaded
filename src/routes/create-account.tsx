@@ -6,6 +6,7 @@ import {
   Title,
   Wrapper,
 } from "components/auth-components";
+import GithubButton from "components/github-btn";
 import { auth } from "firebase-app";
 import { FirebaseError } from "firebase/app";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
@@ -94,6 +95,7 @@ export default function CreateAccount() {
       <Switcher>
         Already have an account? <Link to="/login">Login &rarr;</Link>
       </Switcher>
+      <GithubButton />
     </Wrapper>
   );
 }
