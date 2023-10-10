@@ -3,6 +3,7 @@ import { auth } from "firebase-app";
 export default function Home() {
   const logOut = () => {
     auth.signOut();
+    window.location.reload();
   };
 
   return (
